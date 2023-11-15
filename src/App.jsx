@@ -1,9 +1,20 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Navbar from './components/ui/Navbar';
+
+import Home from './pages/Home';
+import Gallery from './pages/Gallery';
+
 
 function App() {
   return (
-    <div>
-      <h1>Application Moma Chief</h1>
-    </div>
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/domicile' element={<Gallery/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
